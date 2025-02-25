@@ -1,0 +1,182 @@
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+textarea {
+    height: 200px;
+    width: 100%;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 650px;
+    background-color: white;
+    padding: 55px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Navegación */
+.navbar {
+    width: 100%;
+    max-width: 800px;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #45a049;
+}
+
+/* Encabezados y textos */
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Botones y enlaces */
+a,
+button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+a:hover,
+button:hover {
+    background-color: #45a049;
+}
+
+/* Botón eliminar */
+.delete-btn {
+    background-color: #e74c3c;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Formularios */
+form:not(.container form) {
+    width: 100%;
+    max-width: 650px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    text-align: center;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+form button {
+    background-color: #f44336;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e53935;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        max-width: 300px;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}

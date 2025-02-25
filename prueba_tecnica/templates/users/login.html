@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Inicio de sesión</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    <p>
+        <a href="{% url 'users:create_account' %}">Registrarse</a>
+        <a href="{% url 'users:password_reset' %}">¿Olvidaste tu contraseña?</a>
+    </p>
+    {% if request.GET.reset_done %}
+        <p style="color: green;">Tu contraseña ha sido restablecida correctamente. Ahora puedes iniciar sesión.</p>
+    {% endif %}
+{% endblock %}

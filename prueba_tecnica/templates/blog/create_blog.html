@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+    <h1>Crear nueva entrada en el blog</h1>
+</header>
+
+<section class="form-section">
+    <form method="POST" class="blog-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <a href="{% url 'blog:index' %}" class="back-link">Volver a la página principal</a>
+</footer>
+{% endblock %}

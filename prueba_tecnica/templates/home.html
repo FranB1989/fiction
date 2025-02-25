@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <h1>¡Enhorabuena, has iniciado sesión!</h1>
+    <p>Bienvenido a tu página.</p>
+    
+    <a href="{% url 'blog:index' %}">Ir al blog</a>
+    
+    {% if request.user.is_authenticated %}
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
+    {% endif %}
+</body>
+{% endblock %}
